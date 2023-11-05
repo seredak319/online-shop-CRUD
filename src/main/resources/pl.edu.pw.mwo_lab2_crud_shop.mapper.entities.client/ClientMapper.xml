@@ -1,0 +1,35 @@
+<?xml version="1.0" encoding="UTF-8" ?>
+<!DOCTYPE mapper PUBLIC "-//mybatis.org//DTD Mapper 3.0//EN" "http://mybatis.org/dtd/mybatis-3-mapper.dtd">
+<mapper namespace="pl.edu.pw.mwo_lab2_crud_shop.mapper.entities.client.ClientMapper">
+
+    <select id="fetchClient" resultType="pl.edu.pw.mwo_lab2_crud_shop.entity.entities.Client">
+        SELECT *
+        FROM entities.Clients
+        WHERE client_id = #{clientId}
+    </select>
+
+    <select id="findAllClients" resultType="pl.edu.pw.mwo_lab2_crud_shop.entity.entities.Client">
+        SELECT *
+        FROM entities.Clients
+    </select>
+
+    <delete id="deleteClientById">
+        DELETE
+        FROM entities.Clients
+        WHERE client_id = #{clientId}
+    </delete>
+
+    <insert id="addClient">
+        INSERT INTO entities.Clients (first_name, last_name, email)
+        VALUES (#{firstName}, #{lastName}, #{email})
+    </insert>
+
+    <update id="updateClient" parameterType="pl.edu.pw.mwo_lab2_crud_shop.entity.entities.Client">
+        UPDATE entities.Clients
+        SET first_name = #{client.firstName},
+            last_name  = #{client.lastName},
+            email      = #{client.email}
+        WHERE client_id = #{client.clientId}
+    </update>
+
+</mapper>
