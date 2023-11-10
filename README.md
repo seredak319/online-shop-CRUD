@@ -45,10 +45,10 @@ Navigate to the project directory.
 Run the application using mvn spring-boot:run.
 
 ### API Documentation
-Access the Swagger UI for API documentation: Swagger UI
+Access the Swagger UI for API documentation: [Swagger UI](http://localhost:8080/swagger-ui/index.html#/)
 
 ### H2 Database
-Access the H2 Database Console: H2 Database Console
+Access the H2 Database Console: [H2 Database Console](http://localhost:8080/h2-console) 
 
 
 The project includes comprehensive unit tests using JUnit and Mockito. Test coverage includes various scenarios to ensure the reliability of the implemented features.
