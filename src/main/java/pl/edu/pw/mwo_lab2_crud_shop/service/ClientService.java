@@ -2,20 +2,16 @@ package pl.edu.pw.mwo_lab2_crud_shop.service;
 
 import lombok.RequiredArgsConstructor;
 import org.springframework.stereotype.Service;
-import pl.edu.pw.mwo_lab2_crud_shop.dto.entities.ClientDto;
+import pl.edu.pw.mwo_lab2_crud_shop.dto.entities.client.ClientDto;
 import pl.edu.pw.mwo_lab2_crud_shop.entity.entities.Client;
-import pl.edu.pw.mwo_lab2_crud_shop.mapper.entities.ClientConverter;
+import pl.edu.pw.mwo_lab2_crud_shop.mapper.entities.client.ClientConverter;
 import pl.edu.pw.mwo_lab2_crud_shop.mapper.entities.client.ClientMapper;
 
 import java.util.List;
 
-import static java.util.stream.Collectors.toList;
-
 @Service
 @RequiredArgsConstructor
 public class ClientService {
-
-    // todo walidacje i try catche
 
     private final ClientMapper clientMapper;
     private final ClientConverter clientConverter;

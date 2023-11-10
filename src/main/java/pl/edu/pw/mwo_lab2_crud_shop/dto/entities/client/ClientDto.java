@@ -1,4 +1,4 @@
-package pl.edu.pw.mwo_lab2_crud_shop.dto.entities;
+package pl.edu.pw.mwo_lab2_crud_shop.dto.entities.client;
 
 import com.fasterxml.jackson.annotation.JsonView;
 import lombok.Builder;

@@ -5,7 +5,7 @@ VALUES ('John', 'Doe', 'john.doe@example.com'),
        ('Sarah', 'Wilson', 'sarah.wilson@example.com'),
        ('Michael', 'Brown', 'michael.brown@example.com');
 
-INSERT INTO entities.Products (name, price, stock_quantity, ProductCode)
+INSERT INTO entities.Products (name, price, stock_quantity, product_code)
 VALUES ('USB Drive', 9.99, 100, 'PRD-00001-USBDriveCode'),
        ('Wireless Mouse', 14.99, 75, 'PRD-00002-WirelessMouseCode'),
        ('Smartphone', 499.99, 50, 'PRD-00003-SmartphoneCode'),
@@ -14,18 +14,18 @@ VALUES ('USB Drive', 9.99, 100, 'PRD-00001-USBDriveCode'),
        ('Iphone 15', 2199.00, 0, 'PRD-00006-Ip15');
 
 
-INSERT INTO transactions.Orders (client_id, order_status)
-VALUES (1, 1),
-       (2, 1),
-       (3, 2),
-       (4, 3),
-       (5, 2);
+INSERT INTO transactions.Orders (order_id, client_id, orderStatus)
+VALUES (0, 1, 'NEW'),
+       (1, 2, 'NEW'),
+       (2, 3, 'CANCELED'),
+       (3, 4, 'FINISHED'),
+       (4, 5, 'PROCESSING');
 
-INSERT INTO Ordered_Products (order_id, product_id, quantity)
-VALUES (1, 1, 5),
-       (1, 3, 2),
-       (2, 2, 3),
-       (3, 4, 1),
-       (4, 5, 10),
-       (5, 1, 8),
-       (5, 2, 5);
+INSERT INTO transactions.Ordered_Products (order_id, product_code, quantity)
+VALUES (1, 'PRD-00001-USBDriveCode', 5),
+       (1, 'PRD-00003-SmartphoneCode', 2),
+       (2, 'PRD-00002-WirelessMouseCode', 3),
+       (3, 'PRD-00004-PowerDrillCode', 1),
+       (4, 'PRD-00005-HeadphonesCode', 10),
+       (5, 'PRD-00001-USBDriveCode', 8),
+       (5, 'PRD-00002-WirelessMouseCode', 5);

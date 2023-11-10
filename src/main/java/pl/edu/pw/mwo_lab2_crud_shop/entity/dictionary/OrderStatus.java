@@ -9,7 +9,8 @@ public enum OrderStatus {
 
     NEW("NEW"),
     PROCESSING("PROCESSING"),
-    FINISHED("FINISHED");
+    FINISHED("FINISHED"),
+    CANCELED("CANCELED");
 
     private final String referenceName;
 }

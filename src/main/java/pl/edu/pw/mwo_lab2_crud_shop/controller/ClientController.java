@@ -10,8 +10,8 @@ import lombok.RequiredArgsConstructor;
 import lombok.extern.slf4j.Slf4j;
 import org.springframework.http.HttpStatus;
 import org.springframework.web.bind.annotation.*;
-import pl.edu.pw.mwo_lab2_crud_shop.dto.entities.ClientDto;
-import pl.edu.pw.mwo_lab2_crud_shop.dto.entities.ClientView;
+import pl.edu.pw.mwo_lab2_crud_shop.dto.entities.client.ClientDto;
+import pl.edu.pw.mwo_lab2_crud_shop.dto.entities.client.ClientView;
 import pl.edu.pw.mwo_lab2_crud_shop.entity.entities.Client;
 import pl.edu.pw.mwo_lab2_crud_shop.service.ClientService;
 

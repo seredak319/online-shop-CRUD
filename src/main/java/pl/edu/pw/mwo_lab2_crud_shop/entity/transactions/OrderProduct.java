@@ -5,8 +5,9 @@ import lombok.Value;
 
 @Value
 @Builder
-public class Order {
+public class OrderProduct {
+    int orderProductId;
     int orderId;
-    int clientId;
-    String orderStatus;
+    int productCode;
+    int quantity;
 }

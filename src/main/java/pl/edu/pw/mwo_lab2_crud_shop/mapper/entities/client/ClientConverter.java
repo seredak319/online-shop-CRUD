@@ -1,7 +1,7 @@
-package pl.edu.pw.mwo_lab2_crud_shop.mapper.entities;
+package pl.edu.pw.mwo_lab2_crud_shop.mapper.entities.client;
 
 import org.springframework.stereotype.Component;
-import pl.edu.pw.mwo_lab2_crud_shop.dto.entities.ClientDto;
+import pl.edu.pw.mwo_lab2_crud_shop.dto.entities.client.ClientDto;
 import pl.edu.pw.mwo_lab2_crud_shop.entity.entities.Client;
 
 @Component

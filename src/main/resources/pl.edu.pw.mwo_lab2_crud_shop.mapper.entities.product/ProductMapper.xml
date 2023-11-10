@@ -1,0 +1,42 @@
+<?xml version="1.0" encoding="UTF-8" ?>
+<!DOCTYPE mapper PUBLIC "-//mybatis.org//DTD Mapper 3.0//EN" "http://mybatis.org/dtd/mybatis-3-mapper.dtd">
+<mapper namespace="pl.edu.pw.mwo_lab2_crud_shop.mapper.entities.product.ProductMapper">
+
+    <select id="fetchProductById" resultType="pl.edu.pw.mwo_lab2_crud_shop.entity.entities.Product">
+        SELECT *
+        FROM entities.Products
+        WHERE product_id = #{productId}
+    </select>
+
+    <select id="fetchProductByCode" resultType="pl.edu.pw.mwo_lab2_crud_shop.entity.entities.Product">
+        SELECT *
+        FROM entities.Products
+        WHERE product_code = #{productCode}
+    </select>
+
+    <delete id="deleteProductById">
+        DELETE
+        FROM entities.Products
+        WHERE product_id = #{productId}
+    </delete>
+
+    <insert id="addProduct">
+        INSERT INTO entities.Products (name, price, stock_quantity, product_code)
+        VALUES (#{name}, #{price}, #{stockQuantity}, #{productCode})
+    </insert>
+
+    <update id="updateProduct">
+        UPDATE entities.Products
+        SET name = #{product.name},
+            price = #{product.price},
+            stock_quantity = #{product.stockQuantity},
+            product_code = #{product.productCode}
+        WHERE product_id = #{productId}
+    </update>
+
+    <select id="findAllProducts" resultType="pl.edu.pw.mwo_lab2_crud_shop.entity.entities.Product">
+        SELECT *
+        FROM entities.Products
+    </select>
+
+</mapper>
