@@ -4,6 +4,7 @@
 This project implements an Online Shop Management System, providing functionalities for managing clients, products, and orders. It adheres to the following requirements:
 
 ### Data Model
+
 * Client
 ID: Unique identifier for each client.
 First Name: First name of the client. Required and cannot be null.
